@@ -1,0 +1,48 @@
+{
+    "tasks":[
+        {
+            "id": 1,
+            "name": "Task 1",
+            "status": 2,
+            "priority": 1,
+            "desc": "qwertyuiop",
+            "category_id": 1,
+            "team_id": 1
+        },
+        {
+            "id": 2,
+            "name": "Task 2",
+            "status": 1,
+            "priority": 3,
+            "desc": "asdfghjkl",
+            "category_id": 2,
+            "team_id": 2
+        }
+    ],
+
+    "categories":[
+        {
+            "id": 1,
+            "name": "Bug fix"
+        },
+        {
+            "id": 2,
+            "name": "Enhancement"
+        }
+    ],
+
+    "teams":[
+        {
+            "id": 1,
+            "teamName": "BA"
+        },
+        {
+            "id": 2,
+            "nateamNameme": "QA"
+        },
+        {
+            "id": 3,
+            "teamName": "Dev"
+        }
+    ]
+}

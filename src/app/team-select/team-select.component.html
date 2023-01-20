@@ -1,0 +1,6 @@
+<select class="form-control" (change)="handlerTeam($event)">
+    <option value="">-- SELECT TEAM --</option>
+    <option *ngFor="let team of teams" [value]="team.id">
+        {{team.teamName}}
+    </option>
+</select>

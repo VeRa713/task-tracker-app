@@ -1,0 +1,32 @@
+<div class="mt-2 mb-2"></div>
+
+<div class="card">
+    <div class="card-body">
+      <div class="row">
+        <label>{{taskItem.task_name}}</label>
+        <br>
+        <label>Assigned To: Team #{{taskItem.team_id}}</label>
+        <br>
+        <label>Priority Level: {{taskItem.priority}}</label>
+
+        <label>Status:</label>
+
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary active">To Do</button>
+            <button type="button" class="btn btn-secondary">In Progress</button>
+            <button type="button" class="btn btn-secondary">Done</button>
+        </div>
+
+        <label>Description:</label>
+
+        <div>
+          {{taskItem.desc}}
+        </div>
+
+        <div>
+          <button class="btn btn-secondary">EDIT</button>
+          <button class="btn btn-danger" (click)="handleDelete(taskItem.task_name)">DELETE</button>
+        </div>
+      </div>
+    </div>
+  </div>

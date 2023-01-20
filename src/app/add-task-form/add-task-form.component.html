@@ -1,0 +1,30 @@
+<h4>Add New Task</h4>
+
+  <label>Task Name:</label>
+  <input type="text" class="form-control" [(ngModel)]="taskItem.task_name">
+
+  <div class="mt-2 mb-2"></div>
+
+  <div class="card">
+    <div class="card-body">
+      <label>
+        Assign To
+      </label>
+      <app-team-select (teamSelectedEvent)="setTeamId($event)"></app-team-select>
+
+      <label>
+        Priority
+      </label>
+      <app-priority-select (prioritySelectedEvent)="setPriorityId($event)"></app-priority-select>
+    </div>
+  </div>
+
+  <div class="mt-2 mb-2"></div>
+
+  <label>Description:</label>
+  <input type="text" id="desc" class="form-control"  [(ngModel)]="taskItem.desc">
+
+  <div class="mt-2 mb-2"></div>
+
+  <button type="submit" value="Add" class="btn btn-success" (click)="btnAddTask()">Add Task</button>
+  <button class="btn btn-light" (click)="btnClear()">Clear</button>
