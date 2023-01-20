@@ -13,6 +13,12 @@ export class TaskItemComponent {
 
   constructor(private taskService: TaskServiceService) { }
 
+  handleEdit(task_name: String): void {
+    console.log("Edit button clicked...")
+
+    this.taskService.editTask(task_name)
+  }
+
   handleDelete(task_name: String): void {
     console.log("Delete button clicked...")
 

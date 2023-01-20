@@ -25,6 +25,14 @@ export class TaskServiceService {
     return tasks
   }
 
+  getById = (id: number) : Observable<TaskItem> => {
+    let task : Observable<TaskItem>
+
+    task = this.http.get<TaskItem>(`${this.baseUrl}/tasks/${id}`, httpOptions)
+
+    return task
+  }
+
   addTask = () : void => {
     //transfer add task button functionality here from add-task-form ts
   }
@@ -39,9 +47,8 @@ export class TaskServiceService {
     //delete task
   }
 
-  editTask = (taskItem: TaskItem) : void => {
+  editTask = (task_name: String) : void => {
     //get taskItem.id
     //edit taskItem.id
   }
-
 }

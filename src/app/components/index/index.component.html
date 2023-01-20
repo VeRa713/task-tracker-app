@@ -1,0 +1,21 @@
+<!-- ADD TASK FORM -->
+<app-add-task-form (formEvent)="formEventHandler($event)"></app-add-task-form>
+
+<hr>
+
+<div>
+  <h4>Task List:</h4>
+
+  <!-- for filtering tasks by priority -->
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary active">Low</button>
+    <button type="button" class="btn btn-success">Medium</button>
+    <button type="button" class="btn btn-danger">High</button>
+  </div>
+
+  <div>
+    <app-task-item *ngFor="let taskItem of taskItems" [taskItem]="taskItem">
+    </app-task-item>
+  </div>
+
+</div>

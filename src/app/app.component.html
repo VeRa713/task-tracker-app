@@ -1,28 +1,18 @@
-<app-header></app-header>
-
 <div class="container">
-  <!-- ADD TASK FORM -->
-  <app-add-task-form (formEvent)="formEventHandler($event)"></app-add-task-form>
+  <app-header></app-header>
 
-  <hr>
+  <ul>
+    <li>
+      <a routerLink="/"> Home </a>
+    </li>
 
-  <div>
-    <h4>Task List:</h4>
+    <li>
+      <a routerLink="/register-user"> Register </a>
+    </li>
+  </ul>
 
-    <!-- for filtering tasks by priority -->
-    <div class="btn-group">
-      <button type="button" class="btn btn-primary active">Low</button>
-      <button type="button" class="btn btn-success">Medium</button>
-      <button type="button" class="btn btn-danger">High</button>
-    </div>
+  <router-outlet></router-outlet>
 
-    <div>
-      <app-task-item *ngFor="let taskItem of taskItems" [taskItem]="taskItem">
-      </app-task-item>
-    </div>
-
-  </div>
-
+  <app-footer></app-footer>
 </div>
 
-<app-footer></app-footer>

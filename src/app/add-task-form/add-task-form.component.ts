@@ -43,6 +43,8 @@ export class AddTaskFormComponent {
     this.formEvent.emit(o)
 
     console.log(o)
+
+    this.btnClear()
   }
 
   btnClear = () => {

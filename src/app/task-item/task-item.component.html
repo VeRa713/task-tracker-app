@@ -24,8 +24,10 @@
         </div>
 
         <div>
-          <button class="btn btn-secondary">EDIT</button>
-          <button class="btn btn-danger" (click)="handleDelete(taskItem.task_name)">DELETE</button>
+          <!-- TO DO: to put link in url -->
+          <a routerLink="/edit-task/{{taskItem.id}}" class="btn btn-secondary w-100">Edit</a>
+          <!-- <button class="btn btn-secondary" (click)="handleEdit(taskItem.task_name)">EDIT</button>
+          <button class="btn btn-danger" (click)="handleDelete(taskItem.task_name)">DELETE</button> -->
         </div>
       </div>
     </div>

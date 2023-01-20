@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TaskItem } from './models/task-item';
-import { TaskServiceService } from './services/task-service.service';
 
 @Component({
   selector: 'app-root',
@@ -8,29 +6,6 @@ import { TaskServiceService } from './services/task-service.service';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent implements OnInit {
-  taskItems: TaskItem[] = [];
+export class AppComponent {
 
-  constructor(
-    private taskService: TaskServiceService
-  ) { }
-
-  // called when component is initialized
-  // async
-  ngOnInit() : void {
-    console.log("ngOnInit() fired for App.Component")
-
-    this.taskService.getAllTasks().subscribe((taskItems) => {
-      this.taskItems = taskItems
-    })
-  }
-
-  formEventHandler = (payload: TaskItem) => {
-    console.log("Handling formEventHandler...")
-    console.log(payload)
-
-    this.taskItems.push(payload)
-
-    console.log(this.taskItems.length);
-  }
 }
