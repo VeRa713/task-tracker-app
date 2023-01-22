@@ -46,7 +46,7 @@ export class AddTaskFormComponent {
 
     // this.formEvent.emit(o)
 
-    this.taskServiceService.save(o).subscribe((savedTask) => {
+    this.taskServiceService.saveTask(o).subscribe((savedTask) => {
       console.log(savedTask)
       this.formEvent.emit(savedTask)
     })

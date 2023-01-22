@@ -34,7 +34,7 @@ export class TaskServiceService {
     return task
   }
 
-  save = (taskItem : TaskItem) : Observable<TaskItem> => {
+  saveTask = (taskItem : TaskItem) : Observable<TaskItem> => {
     let task : Observable<TaskItem>
 
     if(taskItem.id){
