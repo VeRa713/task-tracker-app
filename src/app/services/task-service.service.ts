@@ -1,17 +1,18 @@
-import { Injectable, Output, EventEmitter } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { TaskItem } from '../models/task-item';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-type': 'application/json'
+    'Content-Type': 'application/json'
   })
 }
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class TaskServiceService {
   baseUrl: string = 'http://localhost:5000'
 
@@ -29,6 +30,22 @@ export class TaskServiceService {
     let task : Observable<TaskItem>
 
     task = this.http.get<TaskItem>(`${this.baseUrl}/tasks/${id}`, httpOptions)
+
+    return task
+  }
+
+  save = (taskItem : TaskItem) : Observable<TaskItem> => {
+    let task : Observable<TaskItem>
+
+    if(taskItem.id){
+      // Perform Update: PUT /tasks/:id
+      const url = `${this.baseUrl}/tasks/${taskItem.id}`
+
+      task = this.http.put<TaskItem>(url, taskItem, httpOptions)
+    } else {
+      // Perform Create: POST /tasks
+      task = this.http.post<TaskItem>(`${this.baseUrl}/tasks`, taskItem, httpOptions)
+    }
 
     return task
   }

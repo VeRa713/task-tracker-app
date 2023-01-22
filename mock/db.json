@@ -1,75 +1,79 @@
 {
-    "tasks":[
-        {
-            "id": 1,
-            "task_name": "Task 1",
-            "status": 2,
-            "priority": 1,
-            "desc": "qwertyuiop",
-            "category_id": 1,
-            "team_id": 1
-        },
-        {
-            "id": 2,
-            "task_name": "Task 2",
-            "status": 1,
-            "priority": 3,
-            "desc": "asdfghjkl",
-            "category_id": 2,
-            "team_id": 2
-        },
-        {
-            "id": 2,
-            "task_name": "Task 2",
-            "status": 1,
-            "priority": 3,
-            "desc": "asdfghjkl",
-            "category_id": 2,
-            "team_id": 3
-        },
-        {
-            "id": 3,
-            "task_name": "Task 3",
-            "status": 1,
-            "priority": 3,
-            "desc": "zxcvbnm",
-            "category_id": 2,
-            "team_id": 4
-        },
-        {
-            "id": 4,
-            "task_name": "Task 4",
-            "status": 1,
-            "priority": 3,
-            "desc": "qazxswedcvfrtgb",
-            "category_id": 2,
-            "team_id": 5
-        }
-    ],
-
-    "categories":[
-        {
-            "id": 1,
-            "name": "Bug fix"
-        },
-        {
-            "id": 2,
-            "name": "Enhancement"
-        }
-    ],
-
-    "teams":[
-        {
-            "id": 1,
-            "teamName": "BA"
-        },
-        {
-            "id": 2,
-            "nateamNameme": "QA"
-        },
-        {
-            "id": 3,
-            "teamName": "Dev"
-        }
-    ]
+  "tasks": [
+    {
+      "id": 1,
+      "task_name": "Task 1",
+      "status": 2,
+      "priority": 1,
+      "desc": "qwertyuiop",
+      "category_id": 1,
+      "team_id": 1
+    },
+    {
+      "id": 2,
+      "task_name": "Task 2",
+      "status": 1,
+      "priority": 3,
+      "desc": "asdfghjkl",
+      "category_id": 2,
+      "team_id": 2
+    },
+    {
+      "id": 2,
+      "task_name": "Task 2",
+      "status": 1,
+      "priority": 3,
+      "desc": "asdfghjkl",
+      "category_id": 2,
+      "team_id": 3
+    },
+    {
+      "id": 3,
+      "task_name": "Task 3",
+      "status": 1,
+      "priority": 3,
+      "desc": "zxcvbnm",
+      "category_id": 2,
+      "team_id": 4
+    },
+    {
+      "id": 4,
+      "task_name": "Task 4",
+      "status": 1,
+      "priority": 3,
+      "desc": "qazxswedcvfrtgb",
+      "category_id": 2,
+      "team_id": 5
+    },
+    {
+      "id": 5,
+      "task_name": "New Task",
+      "status": 0,
+      "desc": "Added new task from UI"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Bug fix"
+    },
+    {
+      "id": 2,
+      "name": "Enhancement"
+    }
+  ],
+  "teams": [
+    {
+      "id": 1,
+      "teamName": "BA"
+    },
+    {
+      "id": 2,
+      "nateamNameme": "QA"
+    },
+    {
+      "id": 3,
+      "teamName": "Dev"
+    }
+  ]
 }

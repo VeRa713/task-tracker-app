@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { TaskItem } from '../models/task-item';
+import { TaskServiceService } from '../services/task-service.service';
 
 @Component({
   selector: 'app-add-task-form',
@@ -8,6 +9,8 @@ import { TaskItem } from '../models/task-item';
 })
 
 export class AddTaskFormComponent {
+  constructor(private taskServiceService : TaskServiceService) {}
+
   priorityId : number
   teamId: number
 
@@ -32,19 +35,21 @@ export class AddTaskFormComponent {
   }
 
   btnAddTask = () => {
-    console.log("Saving task...");
+    console.log("Saving task...")
     console.log(this.taskItem)
 
+    // Copying the actual object into o
     let o = { ...this.taskItem }
 
     o.team_id = this.teamId
     o.priority = this.priorityId
 
-    this.formEvent.emit(o)
+    // this.formEvent.emit(o)
 
-    console.log(o)
-
-    this.btnClear()
+    this.taskServiceService.save(o).subscribe((savedTask) => {
+      console.log(savedTask)
+      this.formEvent.emit(savedTask)
+    })
   }
 
   btnClear = () => {
