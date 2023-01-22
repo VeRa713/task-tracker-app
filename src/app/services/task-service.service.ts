@@ -50,10 +50,6 @@ export class TaskServiceService {
     return task
   }
 
-  addTask = () : void => {
-    //transfer add task button functionality here from add-task-form ts
-  }
-
   // @Output() deleteEvent: EventEmitter<any> = new EventEmitter<any>()
 
   deleteTask = (task_name: String) : void => {
